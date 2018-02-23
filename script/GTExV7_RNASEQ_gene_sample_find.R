@@ -39,7 +39,3 @@ rpkm_fc$ensem <- as.character((lapply(strsplit(rpkm_fc$ensem,"\\."),function(x) 
 rpkm_fc_id <- rpkm_fc[which(rpkm_fc$ensem %in% geneid$X2),]
 rpkm_fc_id$id <- geneid$X1[match(rpkm_fc_id$ensem,geneid$X2)]
 write.csv(rpkm_fc_id,file="~/tmp/CKgene_FC_rpkm.csv")
-
-
-
-
