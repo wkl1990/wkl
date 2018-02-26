@@ -1,4 +1,7 @@
-#psychENCODE sample filter and gene filter
+##Description: psychENCODE sample filter and gene filter
+##Author: Michael, WKL 
+##Data: 20180226
+##Environment: R3.3
 
 library(WGCNA); 
 library(dplyr)
