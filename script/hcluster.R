@@ -48,4 +48,3 @@ colLab <- function(n) {
 clusDendro = dendrapply(hcd, colLab)
 plot(clusDendro, main = "Cool Dendrogram")
 # legend("topright",legend = c("non-outliers","outliers"), col=labelColors,pch=19,cex=.7)
-
