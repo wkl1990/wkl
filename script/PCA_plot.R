@@ -5,7 +5,7 @@
 
 #step-by-step pca plot
 pcdata <- princomp(data,cor=T)
-pdf("pcv1.pdf")
+pdf("pca1.pdf")
 plot(pcdata$loadings,pch=18)
 text(pcdata$loadings,substring(row.names(pcdata$loadings),8),pos=4,cex=.7)
 # text(pcdata$loadings,sub("SAMPLE_"," ",rownames(pcdata$loadings)),pos=4,cex=.7)
@@ -16,6 +16,6 @@ datat <- t(data)
 alldata <- data.frame(datat,trait)
 library(ggfortify)
 pcaplot <- autoplot(prcomp(alldata[,c(1:nrow(data))]),data=alldata,colour="individual.trait",label=TRUE)
-pdf("pcv2.pdf")
+pdf("pca2.pdf")
 plot(pcaplot)
 dev.off()
