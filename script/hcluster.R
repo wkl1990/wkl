@@ -48,3 +48,11 @@ colLab <- function(n) {
 clusDendro = dendrapply(hcd, colLab)
 plot(clusDendro, main = "Cool Dendrogram")
 # legend("topright",legend = c("non-outliers","outliers"), col=labelColors,pch=19,cex=.7)
+
+#hcluster and trait heatmap
+library(WGCNA)
+sampleTree = hclust(dist(t(data)), method = "average")
+#Convert traits to a color representation: white means low, red means high, grey means missing entry
+traitColors = numbers2colors(trait, signed = FALSE);
+# Plot the sample dendrogram and the colors underneath.
+plotDendroAndColors(sampleTree, traitColors, groupLabels = names(trait), main = "Samples dendrogram and trait heatmap")
