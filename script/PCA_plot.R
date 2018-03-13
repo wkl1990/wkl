@@ -12,7 +12,7 @@ normalPCA <- function(data, main="PCA plot"){
 	# text(pcdata$loadings,sub("SAMPLE_"," ",rownames(pcdata$loadings)),pos=4,cex=.7)
 	# dev.off()
 }
-
+#Usage: normalPCA(data,main="MeDIP PCA")
 
 #one step pca auto-plot
 onestepPCA <- function(data, trait, colour, label=FALSE){
