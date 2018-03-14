@@ -6,7 +6,9 @@
 #Usage: pvca1(theDataMatrix, exp_design)
 pvca1 <- function(data, trait, pct_threshold = .5876, main="PVCA plot", xlab="Effects"){
     #load libraries
-    suppressMessages(library(lme4))
+    if(!"lme4" %in% (.packages())) {
+        suppressMessages(library(lme4))
+    }
     pct_threshold = pct_threshold #Amount of variability desired to be explained by the principal components.  Set to match the results in book chapter and SAS code.  User can adjust this to a higher (>= 0.8) number but < 1.0
     #Load data
     theDataMatrix = data
@@ -119,7 +121,9 @@ pvca1 <- function(data, trait, pct_threshold = .5876, main="PVCA plot", xlab="Ef
 #Usage: pvca2(theDataMatrix, exp_design)
 pvca2 <- function(data,trait,pct_threshold = .5876, main="PVCA plot", xlab="Effects"){
     #load libraries
-    suppressMessages(library(lme4))
+    if(!"lme4" %in% (.packages())) {
+        suppressMessages(library(lme4))
+    }
     pct_threshold = pct_threshold #Amount of variability desired to be explained by the principal components.  Set to match the results in book chapter and SAS code.  User can adjust this to a higher (>= 0.8) number but < 1.0
     #Load data
     theDataMatrix <- data
